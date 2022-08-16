@@ -1,0 +1,28 @@
+.section {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  max-width: 1920px;
+}
+
+.section__title {
+  margin-bottom: 22px;
+
+  @include font(700, 32, 1.31, 0);
+  font-family: var(--font-accent);
+  text-align: center;
+  color: var(--text-color-dark-accent);
+
+  @include tablet-only() {
+    margin-bottom: 32px;
+
+    font-size: 40px;
+    line-height: 1.15;
+  }
+
+  @include desktop() {
+    margin-bottom: 52px;
+
+    font-size: 48px;
+    line-height: 1.17;
+  }
+}

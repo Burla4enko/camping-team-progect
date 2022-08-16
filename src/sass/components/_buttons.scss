@@ -1,0 +1,109 @@
+//Main class
+.btn {
+    display: block;
+    padding: 12px 32px;
+    min-width: 287px;
+    min-height: 48px;
+
+    @include font(600, 18, 1.33, 0);
+    color: var(--text-color-light);
+
+    background-color: var(--primary-color);
+    border: 0;
+    border-radius: 10px;
+    cursor: pointer;
+
+    transition: background-color var(--transition-prop),
+        box-shadow var(--transition-prop);
+
+    @include tablet() {
+        min-width: 0;
+        min-height: 0;
+    }
+
+    // Registration btn
+    &--hero {
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+
+    &--top {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    &--bottom {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+
+    &--right {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+
+    &--left {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: var(--primary-color-darker);
+        box-shadow: var(--shadow);
+    }
+}
+
+.btn--reverse {
+    color: var(--primary-color);
+    background-color: #fff;
+
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: #fff;
+        box-shadow: var(--shadow);
+    }
+}
+
+// Residence section
+.btn--small {
+    padding: 8px 16px;
+    min-width: 45px;
+    min-height: 40px;
+}
+
+//Small btn on top
+.btn--header {
+    padding: 8px;
+    min-width: 0;
+    min-height: 0;
+
+    @include font(500, 14, 1.71, 0);
+
+    border-radius: 5px;
+}
+
+.btn--modal {
+    min-width: 68px;
+    min-height: 48px;
+}
+
+//Location section
+.btn-tab {
+    color: var(--text-color-main);
+    background-color: #fff;
+
+    transition: color var(--transition-prop),
+        background-color var(--transition-prop);
+
+    &--active,
+    &:focus,
+    &:hover,
+    &:active {
+        color: var(--text-color-light);
+        background-color: var(--primary-color);
+        box-shadow: var(--shadow);
+    }
+}
